@@ -12,16 +12,6 @@ const Slider = () => {
         {width: 1750, itemsToShow: 6},
     ]
 
-    const imgDetails = [
-        {id: 1, url: "https://placeimg.com/640/480/any"},
-        {id: 2, url: "https://placeimg.com/640/480/any"},
-        {id: 3, url: "https://placeimg.com/640/480/any"},
-        {id: 4, url: "https://placeimg.com/640/480/any"},
-        {id: 5, url: "https://placeimg.com/640/480/any"},
-        {id: 6, url: "https://placeimg.com/640/480/any"},
-    ]
-    const [imageDetails, setImageDetails] = useState(imgDetails)
-
     return (
         <div className='my-4 container'>
             <Carousel breakPoints={breakPoints}>

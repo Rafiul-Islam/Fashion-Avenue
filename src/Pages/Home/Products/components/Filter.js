@@ -12,16 +12,6 @@ class Filter extends Component {
                     </div>
                     <div className="col-md-4">
                         <label>
-                            <span className='h6 text-dark'>Order By</span>
-                            <select className='form-control mt-1' value={sort} onChange={handleChangeSort}>
-                                <option value='' disabled selected>Select</option>
-                                <option value='lowest'>Lowest To highest</option>
-                                <option value='highest'>Highest To Lowest</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div className="col-md-4">
-                        <label>
                             <span className='h6 text-dark'>Filter Size</span>
                             <select className='form-control mt-1' value={size} onChange={handleChangeSize}>
                                 <option value='' selected>ALL</option>
@@ -31,6 +21,16 @@ class Filter extends Component {
                                 <option value='l'>L</option>
                                 <option value='xl'>XL</option>
                                 <option value='xxl'>XXL</option>
+                            </select>
+                        </label>
+                    </div>
+                     <div className="col-md-4">
+                        <label>
+                            <span className='h6 text-dark'>Order By</span>
+                            <select className='form-control mt-1' value={sort} onChange={handleChangeSort}>
+                                <option value='' disabled selected>Select</option>
+                                <option value='lowest'>Lowest To highest</option>
+                                <option value='highest'>Highest To Lowest</option>
                             </select>
                         </label>
                     </div>
