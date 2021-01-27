@@ -3,57 +3,55 @@ import {connect} from "react-redux";
 import {filterProducts, sortProducts} from "../../../../actions/productActions";
 
 
-class Filter extends Component {
-    render() {
-        return (
-            <div className="row text-center">
-                <div className="col-md-4"><h6>{`${this.props.filteredProducts.length} products found.`}</h6></div>
-                <div className="col-md-4 text-left">
-                    <label>
-                        <h6>Order By Price</h6>
-                        <select
-                            className="form-control"
-                            value={this.props.sort}
-                            onChange={(event) => {
-                                this.props.sortProducts(
-                                    this.props.filteredProducts,
-                                    event.target.value
-                                );
-                            }}
-                        >
-                            <option value="">Select</option>
-                            <option value="lowestprice">Lowest to highest</option>
-                            <option value="highestprice">Highest to lowest</option>
-                        </select>
-                    </label>
-                </div>
-                <div className="col-md-4 text-left">
-                    <label>
-                        {" "}
-                        <h6>Filter Size</h6>
-                        <select
-                            className="form-control"
-                            value={this.props.size}
-                            onChange={(event) => {
-                                this.props.filterProducts(
-                                    this.props.products,
-                                    event.target.value
-                                );
-                            }}
-                        >
-                            <option value="">ALL</option>
-                            <option value="x">XS</option>
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                            <option value="xxl">XXL</option>
-                        </select>
-                    </label>
-                </div>
+const Filter = (props) => {
+    return (
+        <div className="row text-center">
+            <div className="col-md-4"><h6>{`${props.filteredProducts.length} products found.`}</h6></div>
+            <div className="col-md-4 text-left">
+                <label>
+                    <h6>Order By Price</h6>
+                    <select
+                        className="form-control"
+                        value={props.sort}
+                        onChange={(event) => {
+                            props.sortProducts(
+                                props.filteredProducts,
+                                event.target.value
+                            );
+                        }}
+                    >
+                        <option value="">Select</option>
+                        <option value="lowestprice">Lowest to highest</option>
+                        <option value="highestprice">Highest to lowest</option>
+                    </select>
+                </label>
             </div>
-        );
-    }
+            <div className="col-md-4 text-left">
+                <label>
+                    {" "}
+                    <h6>Filter Size</h6>
+                    <select
+                        className="form-control"
+                        value={props.size}
+                        onChange={(event) => {
+                            props.filterProducts(
+                                props.products,
+                                event.target.value
+                            );
+                        }}
+                    >
+                        <option value="">ALL</option>
+                        <option value="x">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    );
 }
 
 const mapStateToProps = (state) => ({
