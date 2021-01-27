@@ -1,29 +1,41 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import {fetchProducts} from "../../../../actions/productActions";
+import {addToCart} from "../../../../actions/cartActions";
 
 class Products extends Component {
-    render() {
-        const {products, handleAddToCart} = this.props
+    componentDidMount() {
+        this.props.fetchProducts();
+    }
 
-        const productItems = products.map((product, index) => (
-            <div className='col-md-4 my-1' key={index}>
-                <div className='img-thumbnail text-center rounded'>
-                    <a href={`#${product.id}`} onClick={(e) => handleAddToCart(e, product)}>
-                        <img src={`/products/${product.sku}_2.jpg`} alt={product.title}/>
+    render() {
+        const productItems = this.props.products.map((product) => (
+            <div className="col-md-4" key={product.id}>
+                <div className="img-thumbnail text-center m-2">
+                    <a
+                        href={`#${product.id}`}
+                        onClick={(e) => this.props.addToCart(this.props.cartItems, product)}
+                    >
+                        <img src={`products/${product.sku}_2.jpg`} alt={product.title}/>
                         <p>{product.title}</p>
                     </a>
-                    <div>
-                        <strong>${product.price}</strong><br/>
-                        <button className='btn btn-secondary mb-2 mt-1' onClick={(e) => handleAddToCart(e, product)}>Add To Cart</button>
-                    </div>
+                    <b>{product.price}</b><br/>
+                    <button
+                        className="btn btn-primary mb-3 mt-2"
+                        onClick={(e) => this.props.addToCart(this.props.cartItems, product)}
+                    >
+                        Add to cart
+                    </button>
                 </div>
             </div>
-        ))
-        return (
-            <div className='row'>
-                {productItems}
-            </div>
-        );
+        ));
+
+        return <div className="row">{productItems}</div>;
     }
 }
 
-export default Products;
+const mapStateToProps = (state) => ({
+    products: state.products.filteredItems,
+    cartItems: state.cart.items,
+});
+export default connect(mapStateToProps, {fetchProducts, addToCart})(Products);
