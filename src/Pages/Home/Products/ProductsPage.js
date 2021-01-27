@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import Filter from "./components/Filter";
 import Products from "./components/Products";
-import Basket from "./components/Basket";
 
 class ProductsPage extends Component {
-
     render() {
         return (
             <div className="container mt-5 mb-3 text-dark">
@@ -14,9 +12,6 @@ class ProductsPage extends Component {
                         <hr/>
                         <Products/>
                     </div>
-                    {/*<div className="col-md-4">*/}
-                    {/*    <Basket/>*/}
-                    {/*</div>*/}
                 </div>
                 <hr className='my-5'/>
             </div>

@@ -22,7 +22,7 @@ class Cart extends Component {
               <tr>
                 <th scope="col">Product</th>
                 <th scope="col">Price</th>
-                <th scope="col">Count</th>
+                <th scope="col" className='text-center'>Number Of Products</th>
                 <th scope="col">Total</th>
                 <th scope="col"></th>
               </tr>
@@ -32,7 +32,7 @@ class Cart extends Component {
                   <tr key={index}>
                     <td>{item.title}</td>
                     <td><strong>$</strong>{item.price}</td>
-                    <td>{item.count}</td>
+                    <td className='text-center'>{item.count}</td>
                     <td><strong>$</strong>{item.price * item.count}</td>
                     <button
                         className='bg-danger rounded border-0 mt-2 text-white'
