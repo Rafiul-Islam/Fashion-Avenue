@@ -25,14 +25,14 @@ const Slider = () => {
     return (
         <div className='my-4 container'>
             <Carousel breakPoints={breakPoints}>
-                <Card id="1" url='https://placeimg.com/640/480/animals'/>
-                <Card id="2" url='https://placeimg.com/640/480/any'/>
-                <Card id="3" url='https://placeimg.com/640/480/arch'/>
-                <Card id="4" url='https://placeimg.com/640/480/nature'/>
-                <Card id="5" url='https://placeimg.com/640/480/people'/>
-                <Card id="6" url='https://placeimg.com/640/480/tech'/>
-                <Card id="7" url='https://placeimg.com/640/480/grayscale'/>
-                <Card id="8" url='https://placeimg.com/640/480/sepia'/>
+                <Card id="1" url={`/products/18644119330491310_1.jpg`}/>
+                <Card id="2" url={`/products/18532669286405344_1.jpg`}/>
+                <Card id="3" url={`/products/11854078013954528_1.jpg`}/>
+                <Card id="4" url={`/products/10547961582846888_1.jpg`}/>
+                <Card id="5" url={`/products/9197907543445676_1.jpg`}/>
+                <Card id="6" url={`/products/6090484789343891_1.jpg`}/>
+                <Card id="7" url={`/products/5619496040738316_1.jpg`}/>
+                <Card id="8" url={`/products/876661122392077_1.jpg`}/>
             </Carousel>
         </div>
     );

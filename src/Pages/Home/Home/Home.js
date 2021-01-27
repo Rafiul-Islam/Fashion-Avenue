@@ -3,7 +3,7 @@ import HomePageProduct from "../HeaderProduct/HomePageProduct";
 import TagLine from "../HomeTagLine/TagLine";
 import FeatureProducts from "../FeatureProducts/FeatureProducts";
 import NewsLetter from "../NewsLetter/NewsLetter";
-import Products from "../Products/Products";
+import ProductsPage from "../Products/ProductsPage";
 import About from "../About/About";
 import Footer from "../Footer/Footer/Footer";
 
@@ -14,7 +14,7 @@ const Home = () => {
             <HomePageProduct/>
             <FeatureProducts/>
             <NewsLetter/>
-            <Products/>
+            <ProductsPage/>
             <About/>
             <Footer/>
         </div>
