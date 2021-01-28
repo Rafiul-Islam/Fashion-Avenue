@@ -16,7 +16,7 @@ const NewsLetter = () => {
                                 <input type="email" className="form-control" id="email"
                                        placeholder="Email Address"/>
                             </div>
-                            <button className="btn btn-secondary mb-2">Subscribe</button>
+                            <button className="btn btn-secondary mb-2" onClick={(e) => e.preventDefault()}>Subscribe</button>
                         </form>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ const Products = (props) => {
                     onClick={(e) => props.addToCart(props.cartItems, product)}
                 >
                     <img src={`products/${product.sku}_2.jpg`} alt={product.title}/>
-                    <p>{product.title}</p>
+                    <p onClick={(e) => e.preventDefault()}>{product.title}</p>
                 </a>
                 <b>{product.price}</b><br/>
                 <button
