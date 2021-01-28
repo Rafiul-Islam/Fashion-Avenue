@@ -5,7 +5,7 @@ import FeatureProducts from "../FeatureProducts/FeatureProducts";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import ProductsPage from "../Products/ProductsPage";
 import About from "../About/About";
-import Footer from "../Footer/Footer/Footer";
+import UpperFooter from "../Footer/Footer/Footer";
 
 const Home = () => {
     return (
@@ -16,7 +16,7 @@ const Home = () => {
             <NewsLetter/>
             <ProductsPage/>
             <About/>
-            <Footer/>
+            <UpperFooter/>
         </div>
     );
 };

@@ -9,9 +9,9 @@ class Cart extends Component {
 
         return (
             <>
-                <div className=' mx-3 mx-md-5 row'>
-                    <div className="col-md-8">
-                        <div className="alert alert-info mt-5">
+                <div className='mx-3 mx-md-5 row'>
+                    <div className="col-md-9">
+                        <div className="alert alert-info mt-5 ">
                             {cartItems.length === 0 ? (
                                 "Basket is empty"
                             ) : (
@@ -21,12 +21,12 @@ class Cart extends Component {
                             )}
                             {cartItems.length > 0 && (
                                 <div>
-                                    <table className="table table-striped table-bordered">
+                                    <table className="table table-striped">
                                         <thead className="text-dark">
                                         <tr>
                                             <th scope="col">Product</th>
                                             <th scope="col">Price</th>
-                                            <th scope="col" className='text-center'>Number Of Products</th>
+                                            <th scope="col" className='text-md-center'>Count</th>
                                             <th scope="col">Total</th>
                                             <th scope="col"></th>
                                         </tr>
@@ -36,7 +36,7 @@ class Cart extends Component {
                                             <tr key={index}>
                                                 <td>{item.title}</td>
                                                 <td><strong>$</strong>{item.price}</td>
-                                                <td className='text-center'>{item.count}</td>
+                                                <td className='text-md-center'>{item.count}</td>
                                                 <td><strong>$</strong>{item.price * item.count}</td>
                                                 <button
                                                     className='bg-danger rounded border-0 mt-2 text-white'
@@ -62,7 +62,7 @@ class Cart extends Component {
                             )}
                         </div>
                     </div>
-                    <div className="col-md-4 mt-5 text-left">
+                    <div className="col-md-3 mt-5 text-left">
                         <div className='alert alert-primary text-dark'>
                             <h4 className='mb-3'>Summary</h4>
                             <div className="form-group mb-2">

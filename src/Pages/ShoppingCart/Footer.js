@@ -2,6 +2,7 @@ import React from 'react';
 import {faCopyright} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useHistory} from "react-router-dom";
+import './Style/style.css'
 
 const Footer = () => {
     const history = useHistory()
@@ -18,7 +19,7 @@ const Footer = () => {
         history.push('/help')
     }
     return (
-        <div className='fixed-bottom'>
+        <div id='cartFooter'>
             <hr className='my-2'/>
             <div className='d-flex justify-content-center mb-2'>
                 <div className='border-dark border-right px-3'>
