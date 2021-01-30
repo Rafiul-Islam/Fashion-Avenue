@@ -21,7 +21,7 @@ class Cart extends Component {
                             )}
                             {cartItems.length > 0 && (
                                 <div>
-                                    <table className="table table-striped">
+                                    <table className="table table-striped table-bordered">
                                         <thead className="text-dark">
                                         <tr>
                                             <th scope="col">Product</th>

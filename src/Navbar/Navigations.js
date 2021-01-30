@@ -9,7 +9,7 @@ class Navigations extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top">
-                <a className="navbar-brand ml-5" href="#">
+                <a className="navbar-brand ml-md-5" href="#">
                     <FontAwesomeIcon className='fa-2x text-dark' icon={faMountain}/>
                 </a>
                 <div className="input-group ml-3" id='navbar-search'>
@@ -19,8 +19,13 @@ class Navigations extends Component {
                     <input type="text" className="form-control-sm rounded ml-1" placeholder="Search"
                            aria-label="Search"/>
                 </div>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
