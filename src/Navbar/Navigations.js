@@ -12,9 +12,9 @@ class Navigations extends Component {
         const {cartItems} = this.props;
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top">
-                <a className="navbar-brand ml-md-5" href="#">
-                    <FontAwesomeIcon className='fa-2x text-dark' icon={faMountain}/>
-                </a>
+                <NavLink className="navbar-brand ml-md-5" className="nav-link" to="/home">
+                    <FontAwesomeIcon className='fa-3x text-dark' icon={faMountain}/>
+                </NavLink>
                 <div className="input-group ml-3" id='navbar-search'>
                     <div className="input-group-prepend">
                         <FontAwesomeIcon className='mt-2' icon={faSearch}/>
