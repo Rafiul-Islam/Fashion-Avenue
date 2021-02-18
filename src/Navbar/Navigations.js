@@ -2,11 +2,14 @@ import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faSearch, faCartPlus, faMountain} from '@fortawesome/free-solid-svg-icons'
+import {connect} from "react-redux";
+import {addToCart, removeFromCart} from "../actions/cartActions";
 import './Style/style.css'
 
 
 class Navigations extends Component {
     render() {
+        const {cartItems} = this.props;
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top">
                 <a className="navbar-brand ml-md-5" href="#">
@@ -45,7 +48,7 @@ class Navigations extends Component {
                         <li className="nav-item mr-5">
                             <NavLink exact className="nav-link d-flex bg-secondary px-3 rounded text-white" to="/cart">
                                 <FontAwesomeIcon className='mt-1' icon={faCartPlus}/>
-                                <div className='ml-2'>Cart</div>
+                                <div className='ml-2'>{cartItems.length}</div>
                             </NavLink>
                         </li>
                     </ul>
@@ -55,4 +58,13 @@ class Navigations extends Component {
     }
 }
 
-export default Navigations;
+const mapStateToProps = (state) => (
+    {
+        cartItems: state.cart.items,
+    }
+);
+export default connect(mapStateToProps,
+    {
+        addToCart, removeFromCart
+    }
+)(Navigations);
